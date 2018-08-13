@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="titleTextColor">@color/colorTextWhite</item>
+    </style>
+
+
+    <style name="EditTextStyle">
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+    </style>
+
+
+    <style name="CreateListDialog">
+        <item name="android:windowEnterAnimation">@anim/create_list_enter</item>
+        <item name="android:windowExitAnimation">@anim/create_list_exit</item>
+    </style>
+
+    <style name="AppTheme.AppBarLight">
+        <item name="colorControlNormal">@color/colorTextWhite</item>
+    </style>
+
+</resources>
