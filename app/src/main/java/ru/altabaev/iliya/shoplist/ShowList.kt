@@ -58,6 +58,7 @@ class ShowList : BaseActivity() {
 
         items.layoutManager = LinearLayoutManager(this)
         adapter = ItemsRecyclerAdapter(this)
+        items.recycledViewPool.setMaxRecycledViews(0, 0);
         items.adapter = adapter
 
         val callback = SimpleItemTouchHelperCallback(adapter!!)

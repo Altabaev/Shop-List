@@ -62,14 +62,14 @@ class ItemsRecyclerAdapter(private val context: Context) : RecyclerView.Adapter<
             val checkbox = holder.itemView?.findViewById<AppCompatCheckBox>(R.id.complited)
             holder.itemView?.findViewById<LinearLayout>(R.id.check)?.setOnClickListener {
                 checkbox?.isChecked = checkbox?.isChecked?.not() ?: false
-                holder.itemView?.findViewById<LinearLayout>(R.id.ll)
-                        ?.setBackgroundResource((if (checkbox?.isChecked!!) R.color.colorSalad else R.color.colorTextWhite))
             }
 
             checkbox?.setOnCheckedChangeListener { buttonView, isChecked ->
                 DBWorker.getInstance().getRealm().executeTransaction {
                     item?.complited = isChecked
                 }
+                holder.itemView?.findViewById<LinearLayout>(R.id.ll)
+                        ?.setBackgroundResource((if (checkbox?.isChecked!!) R.color.colorSalad else R.color.colorTextWhite))
             }
 
             holder.itemView?.findViewById<ImageButton>(R.id.option_menu)
